@@ -38,7 +38,8 @@
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
-        Heildarfjöldi: <span class="count">0</span>
+        Heildarfjöldi: <span class="count">0</span><br>
+        Í dag: <span class="today-sets">0</span>/3 sett
       </div>
     </section>
 
@@ -65,7 +66,8 @@
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
-        Heildarfjöldi: <span class="count">0</span>
+        Heildarfjöldi: <span class="count">0</span><br>
+        Í dag: <span class="today-sets">0</span>/3 sett
       </div>
     </section>
 
@@ -93,7 +95,8 @@
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
-        Heildarfjöldi: <span class="count">0</span>
+        Heildarfjöldi: <span class="count">0</span><br>
+        Í dag: <span class="today-sets">0</span>/3 sett
       </div>
     </section>
 
@@ -117,7 +120,8 @@
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
-        Heildarfjöldi: <span class="count">0</span>
+        Heildarfjöldi: <span class="count">0</span><br>
+        Í dag: <span class="today-sets">0</span>/3 sett
       </div>
     </section>
 
@@ -139,10 +143,33 @@
       <p>20–30 sek</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
-        Heildarfjöldi: <span class="count">0</span>
+        Heildarfjöldi: <span class="count">0</span><br>
+        Í dag: <span class="today-sets">0</span>/3 sett
       </div>
     </section>
   </main>
+
+  <section id="week-section">
+    <h2>Vikuyfirlit</h2>
+
+    <div id="day-checks" class="day-checks"></div>
+
+    <div class="pie-wrap">
+      <svg id="week-pie" viewBox="0 0 120 120" width="140" height="140"></svg>
+      <div id="trophy" class="trophy hidden">🏆</div>
+    </div>
+
+    <div id="battery-row" class="battery-row"></div>
+
+    <div id="last-week-box" class="last-week-box">Sæki síðustu viku…</div>
+  </section>
+
+  <div id="popup-overlay" class="popup-overlay hidden">
+    <div class="popup-box">
+      <p id="popup-text"></p>
+      <button id="popup-close" class="done-btn">Loka</button>
+    </div>
+  </div>
 
   <footer>
     <p>Installable PWA – bættu á heimaskjá.</p>
