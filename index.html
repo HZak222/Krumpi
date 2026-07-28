@@ -14,9 +14,27 @@
   </header>
 
   <main id="exercise-list">
-    <!-- Dæmi um æfingu -->
     <section class="exercise-card" data-id="wall-pushups">
       <h2>Vegg-upphýfingar</h2>
+      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir vegg-upphýfingu">
+        <style>
+          .wp-wall{stroke:#4b5563;stroke-width:4}
+          .wp-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
+          .wp-head{fill:#e5e7eb}
+          .wp-arm{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:120px 70px;animation:wpArm 2s ease-in-out infinite}
+          @keyframes wpArm{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-18deg)}}
+          .wp-lean{animation:wpLean 2s ease-in-out infinite}
+          @keyframes wpLean{0%,100%{transform:translateX(0)}50%{transform:translateX(14px)}}
+        </style>
+        <line class="wp-wall" x1="170" y1="20" x2="170" y2="140"/>
+        <g class="wp-lean">
+          <circle class="wp-head" cx="60" cy="55" r="14"/>
+          <line class="wp-body" x1="60" y1="69" x2="95" y2="105"/>
+          <line class="wp-body" x1="95" y1="105" x2="55" y2="140"/>
+          <line class="wp-body" x1="95" y1="105" x2="125" y2="140"/>
+          <line class="wp-arm" x1="90" y1="80" x2="150" y2="70"/>
+        </g>
+      </svg>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
@@ -26,6 +44,24 @@
 
     <section class="exercise-card" data-id="band-row">
       <h2>Teygju-róður</h2>
+      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir teygju-róður">
+        <style>
+          .br-anchor{stroke:#4b5563;stroke-width:4}
+          .br-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
+          .br-head{fill:#e5e7eb}
+          .br-band{stroke:#22c55e;stroke-width:3;fill:none;animation:brBand 1.6s ease-in-out infinite}
+          .br-arm{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:110px 75px;animation:brArm 1.6s ease-in-out infinite}
+          @keyframes brArm{0%,100%{transform:translateX(0)}50%{transform:translateX(-35px)}}
+          @keyframes brBand{0%,100%{d:path("M170,75 Q140,75 110,75")}50%{d:path("M170,75 Q145,75 75,75")}}
+        </style>
+        <line class="br-anchor" x1="175" y1="30" x2="175" y2="120"/>
+        <circle class="br-head" cx="55" cy="60" r="14"/>
+        <line class="br-body" x1="55" y1="74" x2="55" y2="115"/>
+        <line class="br-body" x1="55" y1="115" x2="35" y2="145"/>
+        <line class="br-body" x1="55" y1="115" x2="75" y2="145"/>
+        <path class="br-band" d="M170,75 Q140,75 110,75"/>
+        <line class="br-arm" x1="55" y1="80" x2="110" y2="75"/>
+      </svg>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
@@ -35,6 +71,25 @@
 
     <section class="exercise-card" data-id="band-pull-apart">
       <h2>Band pull-apart</h2>
+      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir band pull-apart">
+        <style>
+          .pa-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
+          .pa-head{fill:#e5e7eb}
+          .pa-band{stroke:#22c55e;stroke-width:3;fill:none;animation:paBand 1.6s ease-in-out infinite}
+          .pa-armL{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:100px 60px;animation:paArmL 1.6s ease-in-out infinite}
+          .pa-armR{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:100px 60px;animation:paArmR 1.6s ease-in-out infinite}
+          @keyframes paArmL{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-25deg)}}
+          @keyframes paArmR{0%,100%{transform:rotate(0deg)}50%{transform:rotate(25deg)}}
+          @keyframes paBand{0%,100%{d:path("M55,60 Q100,60 145,60")}50%{d:path("M25,45 Q100,60 175,45")}}
+        </style>
+        <circle class="pa-head" cx="100" cy="35" r="14"/>
+        <line class="pa-body" x1="100" y1="49" x2="100" y2="100"/>
+        <line class="pa-body" x1="100" y1="100" x2="80" y2="140"/>
+        <line class="pa-body" x1="100" y1="100" x2="120" y2="140"/>
+        <path class="pa-band" d="M55,60 Q100,60 145,60"/>
+        <line class="pa-armL" x1="100" y1="60" x2="55" y2="60"/>
+        <line class="pa-armR" x1="100" y1="60" x2="145" y2="60"/>
+      </svg>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
@@ -44,6 +99,21 @@
 
     <section class="exercise-card" data-id="shoulder-press">
       <h2>Axla-pressa með teygju</h2>
+      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir axla-pressu">
+        <style>
+          .sp-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
+          .sp-head{fill:#e5e7eb}
+          .sp-armL{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:85px 90px;animation:spArm 1.6s ease-in-out infinite}
+          .sp-armR{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:115px 90px;animation:spArm 1.6s ease-in-out infinite}
+          @keyframes spArm{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-70deg)}}
+        </style>
+        <circle class="sp-head" cx="100" cy="45" r="14"/>
+        <line class="sp-body" x1="100" y1="59" x2="100" y2="105"/>
+        <line class="sp-body" x1="100" y1="105" x2="80" y2="140"/>
+        <line class="sp-body" x1="100" y1="105" x2="120" y2="140"/>
+        <line class="sp-armL" x1="85" y1="90" x2="65" y2="120"/>
+        <line class="sp-armR" x1="115" y1="90" x2="135" y2="120"/>
+      </svg>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
@@ -53,6 +123,19 @@
 
     <section class="exercise-card" data-id="plank">
       <h2>Planki á hnjám</h2>
+      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir planka á hnjám">
+        <style>
+          .pl-floor{stroke:#4b5563;stroke-width:3}
+          .pl-body{stroke:#e5e7eb;stroke-width:6;stroke-linecap:round;fill:none;transform-origin:100px 90px;animation:plHold 3s ease-in-out infinite}
+          .pl-head{fill:#e5e7eb;animation:plHold 3s ease-in-out infinite}
+          @keyframes plHold{0%,100%{transform:translateY(0)}50%{transform:translateY(2px)}}
+        </style>
+        <line class="pl-floor" x1="20" y1="130" x2="180" y2="130"/>
+        <circle class="pl-head" cx="150" cy="80" r="14"/>
+        <line class="pl-body" x1="138" y1="88" x2="70" y2="110"/>
+        <line class="pl-body" x1="70" y1="110" x2="40" y2="130"/>
+        <line class="pl-body" x1="70" y1="110" x2="55" y2="95"/>
+      </svg>
       <p>20–30 sek</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">

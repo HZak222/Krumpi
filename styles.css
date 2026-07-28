@@ -31,6 +31,14 @@ header, footer {
   box-shadow: 0 16px 30px rgba(0,0,0,0.6);
 }
 
+.ex-anim {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0.5rem auto;
+}
+
 .done-btn {
   margin-top: 0.5rem;
   padding: 0.5rem 0.75rem;
