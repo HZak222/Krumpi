@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8" />
+  <title>Æfingar fyrir kallinn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Efri hluti – leikfimisplan</h1>
+    <p>Smelltu á lotu þegar hún er kláruð.</p>
+  </header>
+
+  <main id="exercise-list">
+    <!-- Dæmi um æfingu -->
+    <section class="exercise-card" data-id="wall-pushups">
+      <h2>Vegg-upphýfingar</h2>
+      <p>10–15 endurtekningar</p>
+      <button class="done-btn">Klárað í dag ✅</button>
+      <div class="stats">
+        Heildarfjöldi: <span class="count">0</span>
+      </div>
+    </section>
+
+    <section class="exercise-card" data-id="band-row">
+      <h2>Teygju-róður</h2>
+      <p>10–15 endurtekningar</p>
+      <button class="done-btn">Klárað í dag ✅</button>
+      <div class="stats">
+        Heildarfjöldi: <span class="count">0</span>
+      </div>
+    </section>
+
+    <section class="exercise-card" data-id="band-pull-apart">
+      <h2>Band pull-apart</h2>
+      <p>10–15 endurtekningar</p>
+      <button class="done-btn">Klárað í dag ✅</button>
+      <div class="stats">
+        Heildarfjöldi: <span class="count">0</span>
+      </div>
+    </section>
+
+    <section class="exercise-card" data-id="shoulder-press">
+      <h2>Axla-pressa með teygju</h2>
+      <p>10–15 endurtekningar</p>
+      <button class="done-btn">Klárað í dag ✅</button>
+      <div class="stats">
+        Heildarfjöldi: <span class="count">0</span>
+      </div>
+    </section>
+
+    <section class="exercise-card" data-id="plank">
+      <h2>Planki á hnjám</h2>
+      <p>20–30 sek</p>
+      <button class="done-btn">Klárað í dag ✅</button>
+      <div class="stats">
+        Heildarfjöldi: <span class="count">0</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Installable PWA – bættu á heimaskjá.</p>
+  </footer>
+
+  <script src="firebase-config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
