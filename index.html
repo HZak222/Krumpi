@@ -11,30 +11,15 @@
   <header>
     <h1>Efri hluti – leikfimisplan</h1>
     <p>Smelltu á lotu þegar hún er kláruð.</p>
+    <a class="video-link" href="https://youtu.be/RqT0kT3up9c?si=JTS0ik5FaB2mPCjI" target="_blank" rel="noopener">▶️ Sjá æfingarnar á myndbandi</a>
   </header>
 
   <main id="exercise-list">
-    <section class="exercise-card" data-id="wall-pushups">
-      <h2>Vegg-upphýfingar</h2>
-      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir vegg-upphýfingu">
-        <style>
-          .wp-wall{stroke:#4b5563;stroke-width:4}
-          .wp-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
-          .wp-head{fill:#e5e7eb}
-          .wp-arm{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:120px 70px;animation:wpArm 2s ease-in-out infinite}
-          @keyframes wpArm{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-18deg)}}
-          .wp-lean{animation:wpLean 2s ease-in-out infinite}
-          @keyframes wpLean{0%,100%{transform:translateX(0)}50%{transform:translateX(14px)}}
-        </style>
-        <line class="wp-wall" x1="170" y1="20" x2="170" y2="140"/>
-        <g class="wp-lean">
-          <circle class="wp-head" cx="60" cy="55" r="14"/>
-          <line class="wp-body" x1="60" y1="69" x2="95" y2="105"/>
-          <line class="wp-body" x1="95" y1="105" x2="55" y2="140"/>
-          <line class="wp-body" x1="95" y1="105" x2="125" y2="140"/>
-          <line class="wp-arm" x1="90" y1="80" x2="150" y2="70"/>
-        </g>
-      </svg>
+    <section class="exercise-card" data-id="band-row">
+      <h2>Back Row</h2>
+      <div class="flipbook">
+        <img class="flip-img" id="flip-band-row" src="images/back-row-1.jpg" alt="Sýnir back row með teygju">
+      </div>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
@@ -43,25 +28,27 @@
       </div>
     </section>
 
-    <section class="exercise-card" data-id="band-row">
-      <h2>Teygju-róður</h2>
-      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir teygju-róður">
+    <section class="exercise-card" data-id="tricep-extension">
+      <h2>Tricep Extensions</h2>
+      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir tricep extensions með teygju">
         <style>
-          .br-anchor{stroke:#4b5563;stroke-width:4}
-          .br-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
-          .br-head{fill:#e5e7eb}
-          .br-band{stroke:#22c55e;stroke-width:3;fill:none;animation:brBand 1.6s ease-in-out infinite}
-          .br-arm{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:110px 75px;animation:brArm 1.6s ease-in-out infinite}
-          @keyframes brArm{0%,100%{transform:translateX(0)}50%{transform:translateX(-35px)}}
-          @keyframes brBand{0%,100%{d:path("M170,75 Q140,75 110,75")}50%{d:path("M170,75 Q145,75 75,75")}}
+          .te-anchor{stroke:#4b5563;stroke-width:4}
+          .te-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
+          .te-head{fill:#e5e7eb}
+          .te-upper{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round}
+          .te-fore{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:120px 90px;animation:teFore 1.6s ease-in-out infinite}
+          .te-band{stroke:#22c55e;stroke-width:3;fill:none;animation:teBand 1.6s ease-in-out infinite}
+          @keyframes teFore{0%,100%{transform:rotate(-145deg)}50%{transform:rotate(0deg)}}
+          @keyframes teBand{0%,100%{d:path("M165,12 Q140,35 95,55")}50%{d:path("M165,12 Q150,70 120,127")}}
         </style>
-        <line class="br-anchor" x1="175" y1="30" x2="175" y2="120"/>
-        <circle class="br-head" cx="55" cy="60" r="14"/>
-        <line class="br-body" x1="55" y1="74" x2="55" y2="115"/>
-        <line class="br-body" x1="55" y1="115" x2="35" y2="145"/>
-        <line class="br-body" x1="55" y1="115" x2="75" y2="145"/>
-        <path class="br-band" d="M170,75 Q140,75 110,75"/>
-        <line class="br-arm" x1="55" y1="80" x2="110" y2="75"/>
+        <line class="te-anchor" x1="165" y1="8" x2="165" y2="18"/>
+        <circle class="te-head" cx="100" cy="40" r="13"/>
+        <line class="te-body" x1="100" y1="53" x2="100" y2="100"/>
+        <line class="te-body" x1="100" y1="100" x2="85" y2="140"/>
+        <line class="te-body" x1="100" y1="100" x2="115" y2="140"/>
+        <line class="te-upper" x1="112" y1="58" x2="120" y2="90"/>
+        <line class="te-fore" x1="120" y1="90" x2="120" y2="127"/>
+        <path class="te-band" d="M165,12 Q140,35 95,55"/>
       </svg>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
@@ -72,8 +59,8 @@
     </section>
 
     <section class="exercise-card" data-id="band-pull-apart">
-      <h2>Band pull-apart</h2>
-      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir band pull-apart">
+      <h2>Pull Apart</h2>
+      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir pull apart með teygju">
         <style>
           .pa-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
           .pa-head{fill:#e5e7eb}
@@ -100,22 +87,25 @@
       </div>
     </section>
 
-    <section class="exercise-card" data-id="shoulder-press">
-      <h2>Axla-pressa með teygju</h2>
-      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir axla-pressu">
+    <section class="exercise-card" data-id="chest-flies">
+      <h2>Chest Flies</h2>
+      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir chest flies með teygju">
         <style>
-          .sp-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
-          .sp-head{fill:#e5e7eb}
-          .sp-armL{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:85px 90px;animation:spArm 1.6s ease-in-out infinite}
-          .sp-armR{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:115px 90px;animation:spArm 1.6s ease-in-out infinite}
-          @keyframes spArm{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-70deg)}}
+          .cf-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
+          .cf-head{fill:#e5e7eb}
+          .cf-band{stroke:#4b5563;stroke-width:3;fill:none}
+          .cf-armL{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:100px 60px;animation:cfArmL 1.6s ease-in-out infinite}
+          .cf-armR{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:100px 60px;animation:cfArmR 1.6s ease-in-out infinite}
+          @keyframes cfArmL{0%,100%{transform:rotate(-70deg)}50%{transform:rotate(-8deg)}}
+          @keyframes cfArmR{0%,100%{transform:rotate(70deg)}50%{transform:rotate(8deg)}}
         </style>
-        <circle class="sp-head" cx="100" cy="45" r="14"/>
-        <line class="sp-body" x1="100" y1="59" x2="100" y2="105"/>
-        <line class="sp-body" x1="100" y1="105" x2="80" y2="140"/>
-        <line class="sp-body" x1="100" y1="105" x2="120" y2="140"/>
-        <line class="sp-armL" x1="85" y1="90" x2="65" y2="120"/>
-        <line class="sp-armR" x1="115" y1="90" x2="135" y2="120"/>
+        <path class="cf-band" d="M40,95 Q100,115 160,95"/>
+        <circle class="cf-head" cx="100" cy="35" r="14"/>
+        <line class="cf-body" x1="100" y1="49" x2="100" y2="100"/>
+        <line class="cf-body" x1="100" y1="100" x2="80" y2="140"/>
+        <line class="cf-body" x1="100" y1="100" x2="120" y2="140"/>
+        <line class="cf-armL" x1="100" y1="60" x2="45" y2="78"/>
+        <line class="cf-armR" x1="100" y1="60" x2="155" y2="78"/>
       </svg>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
@@ -125,22 +115,64 @@
       </div>
     </section>
 
-    <section class="exercise-card" data-id="plank">
-      <h2>Planki á hnjám</h2>
-      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir planka á hnjám">
+    <section class="exercise-card" data-id="bicep-curls">
+      <h2>Curls</h2>
+      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir curls með teygju">
         <style>
-          .pl-floor{stroke:#4b5563;stroke-width:3}
-          .pl-body{stroke:#e5e7eb;stroke-width:6;stroke-linecap:round;fill:none;transform-origin:100px 90px;animation:plHold 3s ease-in-out infinite}
-          .pl-head{fill:#e5e7eb;animation:plHold 3s ease-in-out infinite}
-          @keyframes plHold{0%,100%{transform:translateY(0)}50%{transform:translateY(2px)}}
+          .cu-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
+          .cu-head{fill:#e5e7eb}
+          .cu-upperL{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round}
+          .cu-upperR{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round}
+          .cu-band{stroke:#4b5563;stroke-width:3;fill:none}
+          .cu-floor{stroke:#4b5563;stroke-width:3}
+          .cu-foreL{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:82px 100px;animation:cuForeL 1.6s ease-in-out infinite}
+          .cu-foreR{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:118px 100px;animation:cuForeR 1.6s ease-in-out infinite}
+          @keyframes cuForeL{0%,100%{transform:rotate(0deg)}50%{transform:rotate(120deg)}}
+          @keyframes cuForeR{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-120deg)}}
         </style>
-        <line class="pl-floor" x1="20" y1="130" x2="180" y2="130"/>
-        <circle class="pl-head" cx="150" cy="80" r="14"/>
-        <line class="pl-body" x1="138" y1="88" x2="70" y2="110"/>
-        <line class="pl-body" x1="70" y1="110" x2="40" y2="130"/>
-        <line class="pl-body" x1="70" y1="110" x2="55" y2="95"/>
+        <line class="cu-floor" x1="20" y1="145" x2="180" y2="145"/>
+        <path class="cu-band" d="M82,145 Q82,120 82,100"/>
+        <path class="cu-band" d="M118,145 Q118,120 118,100"/>
+        <circle class="cu-head" cx="100" cy="40" r="13"/>
+        <line class="cu-body" x1="100" y1="53" x2="100" y2="100"/>
+        <line class="cu-body" x1="100" y1="100" x2="82" y2="140"/>
+        <line class="cu-body" x1="100" y1="100" x2="118" y2="140"/>
+        <line class="cu-upperL" x1="92" y1="60" x2="82" y2="100"/>
+        <line class="cu-upperR" x1="108" y1="60" x2="118" y2="100"/>
+        <line class="cu-foreL" x1="82" y1="100" x2="82" y2="135"/>
+        <line class="cu-foreR" x1="118" y1="100" x2="118" y2="135"/>
       </svg>
-      <p>20–30 sek</p>
+      <p>10–15 endurtekningar</p>
+      <button class="done-btn">Klárað í dag ✅</button>
+      <div class="stats">
+        Heildarfjöldi: <span class="count">0</span><br>
+        Í dag: <span class="today-sets">0</span>/3 sett
+      </div>
+    </section>
+
+    <section class="exercise-card" data-id="chest-flies-ground">
+      <h2>Chest Flies (á gólfi)</h2>
+      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir chest flies á gólfi">
+        <style>
+          .cg-floor{stroke:#4b5563;stroke-width:3}
+          .cg-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
+          .cg-head{fill:#e5e7eb}
+          .cg-armL{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:120px 95px;animation:cgArmL 1.6s ease-in-out infinite}
+          .cg-armR{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:120px 95px;animation:cgArmR 1.6s ease-in-out infinite}
+          @keyframes cgArmL{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-95deg)}}
+          @keyframes cgArmR{0%,100%{transform:rotate(0deg)}50%{transform:rotate(95deg)}}
+        </style>
+        <line class="cg-floor" x1="20" y1="130" x2="180" y2="130"/>
+        <circle class="cg-head" cx="150" cy="105" r="13"/>
+        <line class="cg-body" x1="138" y1="102" x2="90" y2="102"/>
+        <line class="cg-body" x1="90" y1="102" x2="65" y2="118"/>
+        <line class="cg-body" x1="65" y1="118" x2="65" y2="130"/>
+        <line class="cg-body" x1="90" y1="102" x2="75" y2="90"/>
+        <line class="cg-body" x1="75" y1="90" x2="55" y2="100"/>
+        <line class="cg-armL" x1="120" y1="95" x2="70" y2="95"/>
+        <line class="cg-armR" x1="120" y1="95" x2="170" y2="95"/>
+      </svg>
+      <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
         Heildarfjöldi: <span class="count">0</span><br>

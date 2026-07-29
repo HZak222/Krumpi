@@ -2,7 +2,7 @@
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-const EXERCISE_IDS = ["wall-pushups", "band-row", "band-pull-apart", "shoulder-press", "plank"];
+const EXERCISE_IDS = ["band-row", "tricep-extension", "band-pull-apart", "chest-flies", "bicep-curls", "chest-flies-ground"];
 const SETS_TO_FILL = 3;
 const DAY_LABELS = ["Mán", "Þri", "Mið", "Fim", "Fös", "Lau", "Sun"];
 
@@ -219,6 +219,25 @@ async function markDone(exerciseId) {
 
   await refreshWeek();
 }
+
+// ---------- Flipbook (alvöru myndir í stað teikninga) ----------
+const FLIPBOOKS = {
+  "band-row": ["images/back-row-1.jpg", "images/back-row-2.jpg", "images/back-row-3.jpg", "images/back-row-4.jpg"],
+};
+
+function startFlipbooks() {
+  Object.keys(FLIPBOOKS).forEach(exerciseId => {
+    const img = document.getElementById(`flip-${exerciseId}`);
+    if (!img) return;
+    const frames = FLIPBOOKS[exerciseId];
+    let idx = 0;
+    setInterval(() => {
+      idx = (idx + 1) % frames.length;
+      img.src = frames[idx];
+    }, 650);
+  });
+}
+startFlipbooks();
 
 document.querySelectorAll(".exercise-card").forEach(card => {
   const id = card.dataset.id;

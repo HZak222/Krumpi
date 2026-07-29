@@ -10,6 +10,21 @@ header, footer {
   padding: 1rem;
 }
 
+.video-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: #22c55e;
+  color: #022c22;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.video-link:active {
+  transform: scale(0.97);
+}
+
 #exercise-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -37,6 +52,23 @@ header, footer {
   height: auto;
   display: block;
   margin: 0.5rem auto;
+}
+
+.flipbook {
+  width: 100%;
+  max-width: 160px;
+  aspect-ratio: 3 / 4;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111827;
+}
+
+.flip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .done-btn {
@@ -154,7 +186,7 @@ header, footer {
 
 .battery-shell {
   width: 32px;
-  height: 88px;
+  height: 104px;
   border: 2px solid #4b5563;
   border-radius: 6px;
   position: relative;
