@@ -43,25 +43,9 @@
 
     <section class="exercise-card" data-id="band-pull-apart">
       <h2>Pull Apart</h2>
-      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir pull apart með teygju">
-        <style>
-          .pa-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
-          .pa-head{fill:#e5e7eb}
-          .pa-band{stroke:#22c55e;stroke-width:3;fill:none;animation:paBand 1.6s ease-in-out infinite}
-          .pa-armL{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:100px 60px;animation:paArmL 1.6s ease-in-out infinite}
-          .pa-armR{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:100px 60px;animation:paArmR 1.6s ease-in-out infinite}
-          @keyframes paArmL{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-25deg)}}
-          @keyframes paArmR{0%,100%{transform:rotate(0deg)}50%{transform:rotate(25deg)}}
-          @keyframes paBand{0%,100%{d:path("M55,60 Q100,60 145,60")}50%{d:path("M25,45 Q100,60 175,45")}}
-        </style>
-        <circle class="pa-head" cx="100" cy="35" r="14"/>
-        <line class="pa-body" x1="100" y1="49" x2="100" y2="100"/>
-        <line class="pa-body" x1="100" y1="100" x2="80" y2="140"/>
-        <line class="pa-body" x1="100" y1="100" x2="120" y2="140"/>
-        <path class="pa-band" d="M55,60 Q100,60 145,60"/>
-        <line class="pa-armL" x1="100" y1="60" x2="55" y2="60"/>
-        <line class="pa-armR" x1="100" y1="60" x2="145" y2="60"/>
-      </svg>
+      <div class="flipbook-square">
+        <img class="flip-img" id="flip-band-pull-apart" src="images/pull-apart-1.jpg" alt="Sýnir pull apart með teygju">
+      </div>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">

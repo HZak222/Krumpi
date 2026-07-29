@@ -230,6 +230,12 @@ const FLIPBOOKS = {
     "images/tricep-extension-4.jpg",
     "images/tricep-extension-3.jpg"
   ],
+  "band-pull-apart": [
+    "images/pull-apart-1.jpg",
+    "images/pull-apart-2.jpg",
+    "images/pull-apart-3.jpg",
+    "images/pull-apart-4.jpg"
+  ],
 };
 
 function startFlipbooks() {

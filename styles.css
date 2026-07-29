@@ -74,6 +74,16 @@ header, footer {
   background: #111827;
 }
 
+.flipbook-square {
+  width: 100%;
+  max-width: 160px;
+  aspect-ratio: 1 / 1;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111827;
+}
+
 .flip-img {
   width: 100%;
   height: 100%;
