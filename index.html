@@ -56,24 +56,9 @@
 
     <section class="exercise-card" data-id="chest-flies">
       <h2>Chest Flies</h2>
-      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir chest flies með teygju">
-        <style>
-          .cf-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
-          .cf-head{fill:#e5e7eb}
-          .cf-band{stroke:#4b5563;stroke-width:3;fill:none}
-          .cf-armL{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:100px 60px;animation:cfArmL 1.6s ease-in-out infinite}
-          .cf-armR{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:100px 60px;animation:cfArmR 1.6s ease-in-out infinite}
-          @keyframes cfArmL{0%,100%{transform:rotate(-70deg)}50%{transform:rotate(-8deg)}}
-          @keyframes cfArmR{0%,100%{transform:rotate(70deg)}50%{transform:rotate(8deg)}}
-        </style>
-        <path class="cf-band" d="M40,95 Q100,115 160,95"/>
-        <circle class="cf-head" cx="100" cy="35" r="14"/>
-        <line class="cf-body" x1="100" y1="49" x2="100" y2="100"/>
-        <line class="cf-body" x1="100" y1="100" x2="80" y2="140"/>
-        <line class="cf-body" x1="100" y1="100" x2="120" y2="140"/>
-        <line class="cf-armL" x1="100" y1="60" x2="45" y2="78"/>
-        <line class="cf-armR" x1="100" y1="60" x2="155" y2="78"/>
-      </svg>
+      <div class="flipbook-landscape">
+        <img class="flip-img" id="flip-chest-flies" src="images/chest-flies-1.jpg" alt="Sýnir chest flies með teygju">
+      </div>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
@@ -84,31 +69,9 @@
 
     <section class="exercise-card" data-id="bicep-curls">
       <h2>Curls</h2>
-      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir curls með teygju">
-        <style>
-          .cu-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
-          .cu-head{fill:#e5e7eb}
-          .cu-upperL{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round}
-          .cu-upperR{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round}
-          .cu-band{stroke:#4b5563;stroke-width:3;fill:none}
-          .cu-floor{stroke:#4b5563;stroke-width:3}
-          .cu-foreL{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:82px 100px;animation:cuForeL 1.6s ease-in-out infinite}
-          .cu-foreR{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:118px 100px;animation:cuForeR 1.6s ease-in-out infinite}
-          @keyframes cuForeL{0%,100%{transform:rotate(0deg)}50%{transform:rotate(120deg)}}
-          @keyframes cuForeR{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-120deg)}}
-        </style>
-        <line class="cu-floor" x1="20" y1="145" x2="180" y2="145"/>
-        <path class="cu-band" d="M82,145 Q82,120 82,100"/>
-        <path class="cu-band" d="M118,145 Q118,120 118,100"/>
-        <circle class="cu-head" cx="100" cy="40" r="13"/>
-        <line class="cu-body" x1="100" y1="53" x2="100" y2="100"/>
-        <line class="cu-body" x1="100" y1="100" x2="82" y2="140"/>
-        <line class="cu-body" x1="100" y1="100" x2="118" y2="140"/>
-        <line class="cu-upperL" x1="92" y1="60" x2="82" y2="100"/>
-        <line class="cu-upperR" x1="108" y1="60" x2="118" y2="100"/>
-        <line class="cu-foreL" x1="82" y1="100" x2="82" y2="135"/>
-        <line class="cu-foreR" x1="118" y1="100" x2="118" y2="135"/>
-      </svg>
+      <div class="flipbook-wide">
+        <img class="flip-img" id="flip-bicep-curls" src="images/curls-1.jpg" alt="Sýnir curls með teygju">
+      </div>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">
@@ -119,26 +82,9 @@
 
     <section class="exercise-card" data-id="chest-flies-ground">
       <h2>Chest Flies (á gólfi)</h2>
-      <svg class="ex-anim" viewBox="0 0 200 150" role="img" aria-label="Sýnir chest flies á gólfi">
-        <style>
-          .cg-floor{stroke:#4b5563;stroke-width:3}
-          .cg-body{stroke:#e5e7eb;stroke-width:5;stroke-linecap:round;fill:none}
-          .cg-head{fill:#e5e7eb}
-          .cg-armL{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:120px 95px;animation:cgArmL 1.6s ease-in-out infinite}
-          .cg-armR{stroke:#22c55e;stroke-width:5;stroke-linecap:round;transform-origin:120px 95px;animation:cgArmR 1.6s ease-in-out infinite}
-          @keyframes cgArmL{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-95deg)}}
-          @keyframes cgArmR{0%,100%{transform:rotate(0deg)}50%{transform:rotate(95deg)}}
-        </style>
-        <line class="cg-floor" x1="20" y1="130" x2="180" y2="130"/>
-        <circle class="cg-head" cx="150" cy="105" r="13"/>
-        <line class="cg-body" x1="138" y1="102" x2="90" y2="102"/>
-        <line class="cg-body" x1="90" y1="102" x2="65" y2="118"/>
-        <line class="cg-body" x1="65" y1="118" x2="65" y2="130"/>
-        <line class="cg-body" x1="90" y1="102" x2="75" y2="90"/>
-        <line class="cg-body" x1="75" y1="90" x2="55" y2="100"/>
-        <line class="cg-armL" x1="120" y1="95" x2="70" y2="95"/>
-        <line class="cg-armR" x1="120" y1="95" x2="170" y2="95"/>
-      </svg>
+      <div class="flipbook-landscape">
+        <img class="flip-img" id="flip-chest-flies-ground" src="images/chest-flies-ground-1.jpg" alt="Sýnir chest flies á gólfi">
+      </div>
       <p>10–15 endurtekningar</p>
       <button class="done-btn">Klárað í dag ✅</button>
       <div class="stats">

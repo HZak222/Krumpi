@@ -236,6 +236,22 @@ const FLIPBOOKS = {
     "images/pull-apart-3.jpg",
     "images/pull-apart-4.jpg"
   ],
+  "bicep-curls": [
+    "images/curls-1.jpg",
+    "images/curls-2.jpg",
+    "images/curls-3.jpg",
+    "images/curls-4.jpg",
+    "images/curls-5.jpg"
+  ],
+  "chest-flies": [
+    "images/chest-flies-1.jpg",
+    "images/chest-flies-2.jpg",
+    "images/chest-flies-3.jpg"
+  ],
+  "chest-flies-ground": [
+    "images/chest-flies-ground-1.jpg",
+    "images/chest-flies-ground-2.jpg"
+  ],
 };
 
 function startFlipbooks() {
