@@ -250,6 +250,8 @@ const FLIPBOOKS = {
   ],
   "chest-flies-ground": [
     "images/chest-flies-ground-1.jpg",
+    "images/chest-flies-ground-2.jpg",
+    "images/chest-flies-ground-3.jpg",
     "images/chest-flies-ground-2.jpg"
   ],
 };
