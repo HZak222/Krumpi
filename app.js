@@ -64,15 +64,23 @@ function updateTodayUIForCard(exerciseId, setsToday) {
 }
 
 const popupQueue = [];
-function queuePopup(text) {
-  popupQueue.push(text);
+function queuePopup(text, imageSrc) {
+  popupQueue.push({ text, imageSrc: imageSrc || null });
   if (popupQueue.length === 1) showNextPopup();
 }
 function showNextPopup() {
   const overlay = document.getElementById("popup-overlay");
   const textEl = document.getElementById("popup-text");
+  const imgEl = document.getElementById("popup-image");
   if (popupQueue.length === 0) { overlay.classList.add("hidden"); return; }
-  textEl.textContent = popupQueue[0];
+  const current = popupQueue[0];
+  textEl.textContent = current.text;
+  if (current.imageSrc) {
+    imgEl.src = current.imageSrc;
+    imgEl.classList.remove("hidden");
+  } else {
+    imgEl.classList.add("hidden");
+  }
   overlay.classList.remove("hidden");
 }
 document.addEventListener("DOMContentLoaded", () => {
@@ -179,8 +187,11 @@ async function refreshWeek() {
 
   const prevCount = previousFull.size;
   const newCount = fullDaysNow.size;
+  if (newCount >= 3 && prevCount < 3) {
+    queuePopup("Frábært, 3 dagar í röð náðir! 🌟");
+  }
   if (newCount >= 4 && prevCount < 4) {
-    queuePopup("Núna máttu fá þér stóran kleinuhring og mikið af karamellu 🍩");
+    queuePopup("Núna máttu fá þér stóran kleinuhring og mikið af karamellu 🍩", "images/reward-donut.jpg");
   }
 
   weekCache = { mondayStr, dates, data, fullDays: fullDaysNow };
@@ -256,19 +267,51 @@ const FLIPBOOKS = {
   ],
 };
 
-function startFlipbooks() {
+let modalInterval = null;
+function openPhotoModal(exerciseId) {
+  const frames = FLIPBOOKS[exerciseId];
+  if (!frames) return;
+  const modal = document.getElementById("photo-modal");
+  const img = document.getElementById("photo-modal-img");
+  let idx = 0;
+  img.src = frames[0];
+  modal.classList.remove("hidden");
+  if (modalInterval) clearInterval(modalInterval);
+  modalInterval = setInterval(() => {
+    idx = (idx + 1) % frames.length;
+    img.src = frames[idx];
+  }, 1300);
+}
+function closePhotoModal() {
+  const modal = document.getElementById("photo-modal");
+  modal.classList.add("hidden");
+  if (modalInterval) { clearInterval(modalInterval); modalInterval = null; }
+}
+
+function setupFlipbooks() {
   Object.keys(FLIPBOOKS).forEach(exerciseId => {
     const img = document.getElementById(`flip-${exerciseId}`);
     if (!img) return;
     const frames = FLIPBOOKS[exerciseId];
-    let idx = 0;
-    setInterval(() => {
-      idx = (idx + 1) % frames.length;
-      img.src = frames[idx];
-    }, 1300);
+    img.src = frames[0]; // kyrr mynd - fyrsta rammann
+    const container = img.closest(".flipbook, .flipbook-tall, .flipbook-square, .flipbook-wide, .flipbook-landscape");
+    if (container) {
+      container.addEventListener("click", () => openPhotoModal(exerciseId));
+    }
   });
 }
-startFlipbooks();
+setupFlipbooks();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modalCloseBtn = document.getElementById("photo-modal-close");
+  if (modalCloseBtn) modalCloseBtn.addEventListener("click", closePhotoModal);
+  const modal = document.getElementById("photo-modal");
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closePhotoModal();
+    });
+  }
+});
 
 document.querySelectorAll(".exercise-card").forEach(card => {
   const id = card.dataset.id;

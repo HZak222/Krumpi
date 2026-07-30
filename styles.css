@@ -84,6 +84,26 @@ header, footer {
   background: #111827;
 }
 
+.flipbook-wide {
+  width: 100%;
+  max-width: 150px;
+  aspect-ratio: 7 / 10;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111827;
+}
+
+.flipbook-landscape {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 2 / 1;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111827;
+}
+
 .flip-img {
   width: 100%;
   height: 100%;
@@ -283,6 +303,61 @@ header, footer {
   max-width: 320px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.popup-image {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.popup-image.hidden {
+  display: none;
+}
+
+.photo-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-modal.hidden {
+  display: none;
+}
+
+.photo-modal-img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.photo-modal-close {
+  position: absolute;
+  top: env(safe-area-inset-top, 1rem);
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #1f2937;
+  color: #e5e7eb;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.flipbook,
+.flipbook-tall,
+.flipbook-square,
+.flipbook-wide,
+.flipbook-landscape {
+  cursor: pointer;
 }
 
 .popup-box p {
