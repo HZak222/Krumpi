@@ -188,7 +188,7 @@ async function refreshWeek() {
   const prevCount = previousFull.size;
   const newCount = fullDaysNow.size;
   if (newCount >= 3 && prevCount < 3) {
-    queuePopup("Frábært, 3 dagar í röð náðir! 🌟");
+    queuePopup("Frábært, 3 dagar í röð náðir! 🌟", "images/reward-3days.jpg");
   }
   if (newCount >= 4 && prevCount < 4) {
     queuePopup("Núna máttu fá þér stóran kleinuhring og mikið af karamellu 🍩", "images/reward-donut.jpg");

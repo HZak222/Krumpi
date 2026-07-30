@@ -1,6 +1,6 @@
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open("exercise-cache-v8").then(cache => {
+    caches.open("exercise-cache-v9").then(cache => {
       return cache.addAll([
         "./",
         "index.html",
@@ -31,7 +31,8 @@ self.addEventListener("install", (event) => {
         "images/chest-flies-ground-1.jpg",
         "images/chest-flies-ground-2.jpg",
         "images/chest-flies-ground-3.jpg",
-        "images/reward-donut.jpg"
+        "images/reward-donut.jpg",
+        "images/reward-3days.jpg"
       ]);
     })
   );
@@ -40,7 +41,7 @@ self.addEventListener("install", (event) => {
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== "exercise-cache-v8").map(k => caches.delete(k)))
+      Promise.all(keys.filter(k => k !== "exercise-cache-v9").map(k => caches.delete(k)))
     )
   );
 });
