@@ -181,7 +181,7 @@ async function refreshWeek() {
 
   fullDaysNow.forEach(ds => {
     if (!previousFull.has(ds)) {
-      queuePopup("Vel gert, þú mátt fá þér smá karamellukrem 🍬");
+      queuePopup("Vel gert, þú mátt fá þér smá karamellukrem 🍬", "images/reward-donut.jpg");
     }
   });
 
@@ -191,7 +191,7 @@ async function refreshWeek() {
     queuePopup("Frábært, 3 dagar í röð náðir! 🌟", "images/reward-3days.jpg");
   }
   if (newCount >= 4 && prevCount < 4) {
-    queuePopup("Núna máttu fá þér stóran kleinuhring og mikið af karamellu 🍩", "images/reward-donut.jpg");
+    queuePopup("Núna máttu fá þér stóran kleinuhring og mikið af karamellu 🍩");
   }
 
   weekCache = { mondayStr, dates, data, fullDays: fullDaysNow };
@@ -309,6 +309,36 @@ document.addEventListener("DOMContentLoaded", () => {
   if (modal) {
     modal.addEventListener("click", (e) => {
       if (e.target === modal) closePhotoModal();
+    });
+  }
+});
+
+// ---------- Uppsetning appsins (Install PWA) ----------
+let deferredInstallPrompt = null;
+const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  const btn = document.getElementById("install-btn");
+  if (btn) btn.classList.remove("hidden");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("install-btn");
+  const fallback = document.getElementById("install-fallback");
+  if (isStandalone) return; // þegar uppsett - sýna ekkert
+  if (isIOS) {
+    if (fallback) fallback.classList.remove("hidden");
+  }
+  if (btn) {
+    btn.addEventListener("click", async () => {
+      if (!deferredInstallPrompt) return;
+      deferredInstallPrompt.prompt();
+      await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt = null;
+      btn.classList.add("hidden");
     });
   }
 });
